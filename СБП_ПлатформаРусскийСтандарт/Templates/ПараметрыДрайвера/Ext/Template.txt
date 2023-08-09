@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<Settings>
+<Page Caption="Процессинг банка">
+	<Parameter Name="SaleCodeType" Caption="Тип QR-кода для оплаты" Description="Тип QR-кода используемый при совершение оплат ('динамический','платежная ссылка')" TypeValue="Number" DefaultValue="1">
+		<ChoiceList>
+			<Item Value="1">Динамический QR</Item>
+			<Item Value="2">Кассовая платежная ссылка</Item>
+		</ChoiceList>
+	</Parameter>
+	<Parameter Name="HostAdress" Caption="Адрес сервера процессинга" Description="Адрес сервера процессинга банка" TypeValue="String" DefaultValue="194.84.87.15"/>
+	<Parameter Name="НostPort" Caption="Порт сервера процессинга" Description="Порт сервера процессинга банка" TypeValue="Number" DefaultValue="7603"/>
+	<Parameter Name="HostProtocol" Caption="Протокол сервера процессинга" Description="Протокол сервера процессинга банка" TypeValue="String" DefaultValue="HTTPS">
+		<ChoiceList>
+			<Item Value="HTTPS">HTTPS</Item>
+			<Item Value="HTTP">HTTP</Item>
+		</ChoiceList>
+	</Parameter>
+	<Parameter Name="TimeoutWaitingProcessingAnswer" Caption="Интервал ожидания ответа процессинга (сек.)" Description="Интервал ожидания ответа от процессинга банка" TypeValue="Number" DefaultValue="5"/>
+	<Parameter Name="TimeoutWaitingPayment" Caption="Интервал ожидания оплаты / время действия QR-кода (мин.)" Description="Интервал ожидания подтверждения оплаты от процессинга банка, время действия QR-кода в минутах" TypeValue="Number" DefaultValue="1"/>
+	<Parameter Name="RequestMetod" Caption="Метод запросов" Description="Метод запросов к процессингу банка" TypeValue="String" DefaultValue="POST">
+		<ChoiceList>
+			<Item Value="POST">POST</Item>
+			<Item Value="GET">GET</Item>
+		</ChoiceList>
+	</Parameter>
+</Page>
+<Page Caption="Диначеский QR">
+	<Parameter Name="GetQRCode" Caption="Метод формирования динмическго QR-кода" Description="Метод запроса инициализации операции формирования QR-кода" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/getQrCode"/>
+	<Parameter Name="GetQRDStatus" Caption="Метод получения статуса оплаты динамическим QR" Description="Метод запроса инициализации получения статуса выполнения операции" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/getQrdStatus"/>
+</Page>
+<Page Caption="Кассовая платежная ссылка">
+	<Parameter Name="CashQR" Caption="Кассовая платежная ссылка" Description="Кассовая платежная ссылка (должная быть записана в формате: 'ИдентификаторСозданияКПС>КПС')" TypeValue="String" DefaultValue=""/>
+	<Parameter Name="QRCIdReservation" Caption="Метод получения списка идентификаторов не зарегестрированных кассовых ссылок" Description="Метод получения списка идентификаторов не зарегестрированных кассовых ссылок" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/qrcIdReservation"/>
+	<Parameter Name="СreateCashQR" Caption="Метод создания кассовой ссылки в НСПК" Description="Метод запроса инициализации создания Кассовой ссылки в НСПК" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/createCashQR"/>
+	<Parameter Name="ActivateCashQR" Caption="Метод активация кассовой ссылки в НСПК" Description="Метод запроса инициализации активация кассовой ссылки в НСПК" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/activateCashQR"/>
+	<Parameter Name="GetCashQrStatus" Caption="Метод получения статуса оплаты по КПС" Description="Метод запроса инициализации получения статуса выполнения операции оплаты по КПС" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/getCashQrStatus"/>
+	<Parameter Name="DeactivateCashQR" Caption="Метод деактивации КПС" Description="Метод запроса инициализации деактивации ранее активированной КПС" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/deactivateCashQRV2"/>
+</Page>
+<Page Caption="Общие методы">
+	<Parameter Name="QrRefund" Caption="Метод операции возврата" Description="Метод запроса инициализации операции возврата" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/qrRefund"/>
+	<Parameter Name="GetRefundStatus" Caption="Метод получения статуса возврата" Description="Метод запроса инициализации операции получения статуса возврата" TypeValue="String" DefaultValue="/eis-app/eis-rs/businessPaymentService/getRefundStatus"/>
+</Page>
+<Page Caption="Параметры">
+	<Parameter Name="QRInputType" Caption="Устройство вывода QR ссылки" Description="Устройство вывода QR ссылки ('печатать на ККМ','выводить на qr-дисплей')" TypeValue="Number" DefaultValue="1">
+		<ChoiceList>
+			<Item Value="1">QR-дисплей</Item>
+			<Item Value="2">Печать на ККМ</Item>
+			<Item Value="3">Без вывода на устройство</Item>
+		</ChoiceList>
+	</Parameter>
+	<Parameter Name="COMPort" Caption="QR-Дисплей. COM порт" Description="COM порт подключения QR-дисплея" TypeValue="String" DefaultValue="30">
+		<ChoiceList>
+			<Item Value="1">COM1</Item>
+			<Item Value="2">COM2</Item>
+			<Item Value="3">COM3</Item>
+			<Item Value="4">COM4</Item>
+			<Item Value="5">COM5</Item>
+			<Item Value="6">COM6</Item>
+			<Item Value="7">COM7</Item>
+			<Item Value="8">COM8</Item>
+			<Item Value="9">COM9</Item>
+			<Item Value="10">COM10</Item>
+			<Item Value="11">COM11</Item>
+			<Item Value="12">COM12</Item>
+			<Item Value="13">COM13</Item>
+			<Item Value="14">COM14</Item>
+			<Item Value="15">COM15</Item>
+			<Item Value="16">COM16</Item>
+			<Item Value="17">COM17</Item>
+			<Item Value="18">COM18</Item>
+			<Item Value="19">COM19</Item>
+			<Item Value="20">COM20</Item>
+			<Item Value="21">COM21</Item>
+			<Item Value="22">COM22</Item>
+			<Item Value="23">COM23</Item>
+			<Item Value="24">COM24</Item>
+			<Item Value="25">COM25</Item>
+			<Item Value="26">COM26</Item>
+			<Item Value="27">COM27</Item>
+			<Item Value="28">COM28</Item>
+			<Item Value="29">COM29</Item>
+			<Item Value="30">COM30</Item>
+		</ChoiceList>
+	</Parameter>
+	<Parameter Name="IntervalResultDisplay" Caption="QR-Дисплей. Время вывода результата на дисплей (сек.)" Description="Время вывода результата на дисплей" TypeValue="Number" DefaultValue="5"/>
+	<Parameter Name="ExeOpenSSL" Caption="OpenSSL. Каталог исполняемого файла" Description="Исполняемый файл программы OpenSSL" TypeValue="String" DefaultValue="C:\Program Files (x86)\OpenSSL-Win32\bin\openssl.exe"/>
+	<Parameter Name="LogEnable" Caption="Вести логирование операций" Description="Вести логирование операций" TypeValue="boolean" DefaultValue="false"/>
+	<Parameter Name="LogPatch" Caption="Каталог записи логирования" Description="Каталог записи логирования" TypeValue="String" DefaultValue="..\logs\sbp"/>
+	<Parameter Name="LogCount" Caption="Количество хранимых файлов логирования" Description="Количество хранимых файлов логирования" TypeValue="Number" DefaultValue="60"/>
+</Page>
+</Settings>
