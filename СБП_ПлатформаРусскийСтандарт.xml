@@ -20,7 +20,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment>Драйвер-компонента оплаты в 'Ситеме быстрых платежей" на платформе банка 'Русский Стандарт'</Comment>
-			<DefaultForm>ExternalDataProcessor.ДрайверСБП_ПлатформаРусскийСтандарт.Form.ТестированиеФункционала</DefaultForm>
+			<DefaultForm>ExternalDataProcessor.ДрайверСБП_ПлатформаРусскийСтандарт.Form.Сервис</DefaultForm>
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
@@ -165,7 +165,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Form>ТестированиеФункционала</Form>
+			<Form>Сервис</Form>
 			<Form>ОжиданиеОплаты</Form>
 			<Form>Возврат</Form>
 			<Form>КассоваяПлатежнаяСсылка</Form>
@@ -176,7 +176,6 @@
 			<Template>ЛоготипБанк</Template>
 			<Template>ЛоготипСБП</Template>
 			<Template>ЛоготипСБП2</Template>
-			<Template>ДокументацияИнтеграцииСБП</Template>
 			<Template>КартинкаОк</Template>
 			<Template>КартинкаОшибка</Template>
 			<Template>АнимацияОжидание</Template>
