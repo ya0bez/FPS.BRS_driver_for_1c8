@@ -84,8 +84,8 @@
 	</Parameter>
 	<Parameter Name="IntervalResultDisplay" Caption="QR-Дисплей. Время вывода результата на дисплей (сек.)" Description="Время вывода результата на дисплей" TypeValue="Number" DefaultValue="5"/>
 	<Parameter Name="ExeOpenSSL" Caption="OpenSSL. Каталог исполняемого файла" Description="Исполняемый файл программы OpenSSL" TypeValue="String" DefaultValue="C:\Program Files (x86)\OpenSSL-Win32\bin\openssl.exe"/>
-	<Parameter Name="LogEnable" Caption="Вести логирование операций" Description="Вести логирование операций" TypeValue="boolean" DefaultValue="false"/>
+	<Parameter Name="LogEnable" Caption="Вести логирование операций" Description="Вести логирование операций" TypeValue="boolean" DefaultValue="true"/>
 	<Parameter Name="LogPatch" Caption="Каталог записи логирования" Description="Каталог записи логирования" TypeValue="String" DefaultValue="..\logs\sbp"/>
-	<Parameter Name="LogCount" Caption="Количество хранимых файлов логирования" Description="Количество хранимых файлов логирования" TypeValue="Number" DefaultValue="60"/>
+	<Parameter Name="LogCount" Caption="Количество хранимых файлов логирования" Description="Количество хранимых файлов логирования" TypeValue="Number" DefaultValue="200"/>
 </Page>
 </Settings>
